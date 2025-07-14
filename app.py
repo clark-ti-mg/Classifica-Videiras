@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 def main():
     st.set_page_config(
         page_title="Classifica folhas de Videiras"
@@ -12,5 +11,5 @@ def main():
 
     # classificar a imagem
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
