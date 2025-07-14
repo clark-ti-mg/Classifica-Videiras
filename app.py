@@ -14,7 +14,7 @@ import plotly.express as px
 def carrega_modelo():
     # https://drive.google.com/file/d/1GpWix8dp6FeFAs6g0etbnw_avu9Aflfp/view?usp=sharing
     url = "https://drive.google.com/uc?id=1GpWix8dp6FeFAs6g0etbnw_avu9Aflfp"
-    gdown.down(url, 'modelo_quantizado16bits.tflite') # baixa o arquivo (modelo)
+    gdown.download(url, 'modelo_quantizado16bits.tflite') # baixa o arquivo (modelo)
 
     # carrega o modelo
     interpreter = tf.lite.Interpreter(model_path='modelo_quantizado16bits.tflite')
@@ -47,7 +47,7 @@ def carrega_imagem():
         # adicionar uma dimensão extra
         image = np.expand_dims(image, axis=0)
         
-    return image
+        return image
 
 def main():
     st.set_page_config(
